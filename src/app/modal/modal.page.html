@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Overnight Sleep Tracking
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Start Day</ion-label>
+    <ion-datetime displayFormat="MMM D YYYY" min="1997" max="2019" placeholder='Day' [(ngModel)]="sleepStartDay">
+    </ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>End Day</ion-label>
+    <ion-datetime displayFormat="MMM D YYYY" min="1997" max="2019" placeholder='Day' [(ngModel)]="sleepEndDay">
+    </ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Start Time</ion-label>
+    <ion-datetime displayFormat="h:mm A" pickerFormat='h:mm A' placeholder='Time' [(ngModel)]="sleepStartTime">
+    </ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>End Time</ion-label>
+    <ion-datetime displayFormat="h:mm A" placeholder='Time' [(ngModel)]="sleepEndTime">
+    </ion-datetime>
+  </ion-item>
+</ion-content>
+
+<ion-footer>
+  <ion-button fill='outline' color='danger' (click)='modalDismiss()'>Cancel</ion-button>
+  <ion-button (click)='modalSave()'>Save</ion-button>
+</ion-footer>

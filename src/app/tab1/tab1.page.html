@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Nick's Sleep Tracker
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" id='FABcontainer'>
+    <ion-fab-button id='myFAB' color="primary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="medium" (click)='presentSleepTrackModal()' data-desc="Overnight Sleep">
+        <ion-icon name="alarm"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="medium" (click)='presentStanfordModal()' data-desc="Daytime Sleepiness">
+        <ion-icon name="cloudy-night"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <div *ngIf="!isArraysEmpty()">
+    <ion-card *ngFor="let singleOvernight of allOvernightData">
+      <ion-card-header>
+        <ion-card-subtitle>{{ singleOvernight.sleepStart | date: 'shortDate' }} -
+          {{ singleOvernight.sleepEnd | date: 'shortDate' }}</ion-card-subtitle>
+        <ion-card-title>Sleep Log</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Sleep Start: {{ singleOvernight.sleepStart | date: 'shortTime'}} <br>
+        Sleep End: {{ singleOvernight.sleepEnd | date: 'shortTime' }} <br>
+        Total: {{ singleOvernight.summary }}
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngFor="let singleStanford of allStanfordData">
+      <ion-card-header>
+        <ion-card-subtitle>{{ singleStanford.loggedAt | date: 'short'}}</ion-card-subtitle>
+        <ion-card-title>Stanford Sleepiness</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Rating: {{ singleStanford.loggedValue }} <br>
+        {{ singleStanford.sleepiness }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Else -->
+  <div *ngIf="isArraysEmpty()">
+    <h1>No entries yet, add some with the (+) button below</h1>
+  </div>
+
+</ion-content>
