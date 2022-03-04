@@ -1,14 +1,13 @@
 # Sleep-Tracker
 Sleep Tracker App built in Ionic, Angular, &amp; Typescript
 
-# Sleep Tracker
-The ability to log overnight sleep
-The ability to log sleepiness during the day
-The ability to view these two categories of logged data
-Either using a native device resource or backing up logged data
-Following good principles of mobile design
-Creating a compelling app
-A readme which explains how these features were implemented and their design rationale
+Features
+- The ability to log overnight sleep
+- The ability to log sleepiness during the day
+- The ability to view these two categories of logged data
+- Either using a native device resource or backing up logged data
+- Following good principles of mobile design
+- Creating a compelling app
 
 Resources Consulted
 - Ionic Documentation (not very good btw)
