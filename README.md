@@ -34,6 +34,7 @@
       </ul>
     </li>
     <li>
+      <a href="#features">Features</a>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -41,6 +42,8 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#resources-consulted">Resources Consulted</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
   </ol>
@@ -76,7 +79,9 @@
 - The ability to view these two categories of logged data
 - Following good principles of mobile design
 
-
+## Extra features
+- Added tabs to clearly separate different features of the app. The entry and viewing of sleep data is in one tab, and the backup/restore of the data is in a separate tab of the app.
+- Added badge to display how many entries a user has entered so far. Nice feature so the user can quickly and easily see how many times they have logged in the app.
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -101,7 +106,7 @@
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+### Usage
 
 1. Start up the project
    ```sh
@@ -165,10 +170,7 @@ It also displays the start and end time of sleep, along with a total line as wel
 - Backed up using Ionic Storage (free open source), which uses SQLite behind the scenes.
 - It backs up the overnight and stanford sleepiness entries.
 - These entries can be retrived later using the restore button.
-
-## Extra features
-- Added tabs to clearly separate different features of the app. The entry and viewing of sleep data is in one tab, and the backup/restore of the data is in a separate tab of the app.
-- Added badge to display how many entries a user has entered so far. Nice feature so the user can quickly and easily see how many times they have logged in the app.
+- 
 
 <!-- CONTRIBUTING -->
 ## Contributing
